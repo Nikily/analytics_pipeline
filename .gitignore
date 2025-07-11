@@ -1,5 +1,5 @@
 # Python
-__pycache__/
+src/analytics_pipeline/defs/__pycache__/
 *.py[cod]
 *$py.class
 *.so
