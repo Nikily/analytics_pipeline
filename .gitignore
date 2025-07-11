@@ -48,6 +48,7 @@ ehthumbs.db
 Thumbs.db
 
 # Dagster
+.tmp_dagster_home_*/
 dagster_home/
 .dagster/
 .dagster_home/
@@ -58,13 +59,14 @@ compute_logs/
 logs/
 
 # dbt
-target/
+/transform/jdbt/target/*
 dbt_packages/
-logs/
-dbt_modules/
+*logs/
+/transform/jdbt/dbt_modules/
 .dbt/
-profiles.yml
+*transform/jdbt/profiles.yml
 .user.yml
+*profiles.yml
 
 # DuckDB
 *.db
