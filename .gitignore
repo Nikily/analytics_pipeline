@@ -57,6 +57,7 @@ dagster_storage/
 storage/
 compute_logs/
 logs/
+.telemetry/
 
 # dbt
 /transform/jdbt/target/*
