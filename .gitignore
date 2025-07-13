@@ -147,3 +147,6 @@ docker-compose.override.yml
 # Git
 *.orig
 *.rej
+
+# uv 
+uv.lock
