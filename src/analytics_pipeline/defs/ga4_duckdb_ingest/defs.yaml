@@ -4,3 +4,7 @@ attributes:
   loads:
     - source: .loads.my_load_source
       pipeline: .loads.my_load_pipeline
+# resources:
+#   duckdb:
+#     config:
+#       database: "/tmp/jaffle_platform.duckdb"

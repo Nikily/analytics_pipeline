@@ -1,9 +1,26 @@
 import dagster as dg
-import duckdb
+# import duckdb
 from dagster_duckdb import DuckDBResource
+# from dagster import AssetExecutionContext, Definitions
+# from dagster_dlt import DagsterDltResource, dlt_assets
+# from dlt import pipeline
+# from .ga4_duckdb_ingest.google_analytics import google_analytics
+
 
 monthly_partition = dg.MonthlyPartitionsDefinition(start_date="2018-01-01")
 
+# @dlt_assets(
+#         dlt_source=google_analytics(),
+#         dlt_pipeline=pipeline(
+#             pipeline_name = "ga4_to_duckdb",
+#             destination   = "duckdb",
+#             dataset_name  = "ga4_data"
+#         ),
+#     name="ga4_assets",
+#     group_name="ga4_ingestion"
+# )
+# def ga4_dlt_assets(context: AssetExecutionContext, dlt: DagsterDltResource):
+#     yield from dlt.run(context=context)
 
 def import_url_to_duckdb(url: str, duckdb: DuckDBResource, table_name: str):
     with duckdb.get_connection() as conn:        

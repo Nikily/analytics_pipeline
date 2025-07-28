@@ -27,7 +27,7 @@ TIME_DIMENSIONS = {
 @dlt.source(max_table_nesting=2)
 def google_analytics(
     credentials: Union[
-        GcpOAuthCredentials, GcpServiceAccountCredentials
+         GcpServiceAccountCredentials, GcpOAuthCredentials
     ] = dlt.secrets.value,
     property_id: int = dlt.config.value,
     queries: List[DictStrAny] = dlt.config.value,
